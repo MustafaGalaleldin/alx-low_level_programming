@@ -8,11 +8,10 @@ int main(void)
 {
 	char n = 97;
 
-	while (n >= 97 && n <= 121)
+	while (n >= 97 && n <= 122)
 	{
-		putchar('%c', n);
+		putchar('n');
 		n++;
 	}
-	putchar('z');
 	return (0);
 }
