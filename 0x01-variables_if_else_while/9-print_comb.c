@@ -18,8 +18,11 @@ int main(void)
 		putchar(32);
 		x++;
 		}
+		else 
+		{
+		putchar('\n');
+		}
 	}
-	putchar('\n');
 	return (0);
 }
 
