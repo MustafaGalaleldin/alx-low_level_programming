@@ -20,12 +20,16 @@ int main(void)
 			{
 				putchar(y);
 				putchar(x);
+				if (y != 8 && x != 9)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		x++;
 		}
 		y++;
 	}
+	putchar('\n');
 	return (0);
 }
