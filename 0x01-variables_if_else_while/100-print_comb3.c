@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
@@ -7,28 +6,28 @@
  */
 int main(void)
 {
-	int x;
-	int y = 10;
+	int x = 0;
+	int y = 0;
 
 	while (y <= 9)
 	{
 		x = 1 + y;
-		while (x >= 9)
+
+		while (x <= 9)
 		{
-			if (x != y)
+			putchar('0' + y);
+			putchar('0' + x);
+			if (y != '8' || x != '9')
 			{
-				putchar('0' + y);
-				putchar('0' + x);
-				if (y < 8 || x < 9)
-				{
 				putchar(',');
 				putchar(' ');
-				}
 			}
-		x++;
+			x++;
 		}
 		y++;
 	}
 	putchar('\n');
 	return (0);
 }
+
+
