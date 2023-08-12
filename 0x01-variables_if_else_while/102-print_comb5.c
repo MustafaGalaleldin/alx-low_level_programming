@@ -13,15 +13,15 @@ int main(void)
 
 	while (a <= 9)
 	{
-		b = a;
+		b = 0;
 
 		while (b <= 9)
 		{
-			c = b + 1;
+			c = 0;
 
 			while (c <= 9)
 			{
-				d = b + 1;
+				d = a + 1;
 
 				while (d <= 9)
 				{
