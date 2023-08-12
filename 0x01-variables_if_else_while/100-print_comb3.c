@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	int x = '0';
-	int y = '0';
+	int x = 0;
+	int y = 0;
 
-	while (y >= '0' && y <= '9')
+	while (y >= 0 && y <= 9)
 	{
 		x = 0;
 		x = x + y;
-		while (x >= '0' && x >= '9')
+		while (x >= 0 && x >= 9)
 		{
 			if (x != y)
 			{
-				putchar(y);
-				putchar(x);
-				if (y != '8' || x != '9')
+				putchar(y + '0');
+				putchar(x + '0');
+				if (y != 8 || x != 9)
 				{
 				putchar(',');
 				putchar(' ');
