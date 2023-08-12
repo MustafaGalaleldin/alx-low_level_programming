@@ -1,33 +1,47 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Enrty
+*
+* Return: 0
+*/
 int main(void)
 {
-	int x;
-	int y = 10;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
 
-	while (y <= 9)
+	while (a <= 9)
 	{
-		x = 1 + y;
-		while (x >= 9)
+		b = a;
+
+		while (b <= 9)
 		{
-			if (x != y)
+			c = b + 1;
+
+			while (c <= 9)
 			{
-				putchar('0' + y);
-				putchar('0' + x);
-				if (y < 8 || x < 9)
+				d = b + 1;
+
+				while (d <= 9)
 				{
-				putchar(',');
-				putchar(' ');
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(' ');
+					putchar(c + '0');
+					putchar(d + '0');
+					if (a != 9 || b != 8 || c != 9 || d != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					d++;
 				}
+				c++;
 			}
-		x++;
+			b++;
 		}
-		y++;
+		a++;
 	}
 	putchar('\n');
 	return (0);
