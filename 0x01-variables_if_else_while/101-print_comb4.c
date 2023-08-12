@@ -7,27 +7,32 @@
  */
 int main(void)
 {
-	int a;
-	int b = 10;
+	int a = 0;
+	int b = 0;
+	int c = 0;
 
-	while (b <= 9)
+	while (a <= 9)
 	{
-		a = 1 + b;
-		while (a >= 9)
+		b = 1 + a;
+		while (b <= 9)
 		{
-			if (a != b)
+			c = 1 + b;
+
+			while (c <= 9)
 			{
-				putchar('0' + b);
 				putchar('0' + a);
-				if (b < 8 || a < 9)
+				putchar('0' + b);
+				putchar('0' + c);
+				if (a != 7 || b != 8 || c != 9)
 				{
 				putchar(',');
 				putchar(' ');
 				}
-			}
-		a++;
+		c++;
 		}
 		b++;
+		}
+		a++;
 	}
 	putchar('\n');
 	return (0);
