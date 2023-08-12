@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int x = 0;
+	int x;
 	int y = 0;
 
 	while (y <= 9)
@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (x != y)
 			{
-				putchar(y + '0');
-				putchar(x + '0');
+				putchar('0' + y);
+				putchar('0' + x);
 				if (y < 8 || x < 9)
 				{
 				putchar(',');
