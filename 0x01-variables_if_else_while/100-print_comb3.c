@@ -12,8 +12,8 @@ int main(void)
 
 	while (y >= '0' && y <= '9')
 	{
-		x = 0;
-		x = x + y;
+		x = '0';
+		x = x + 1;
 		while (x >= '0' && x >= '9')
 		{
 			if (x != y)
