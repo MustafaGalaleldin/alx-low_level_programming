@@ -1,48 +1,32 @@
 #include <stdio.h>
+
 /**
-* main - Enrty
-*
-* Return: 0
-*/
+ * main - Entry point
+ * Return: 0
+**/
+
 int main(void)
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	int d = 0;
+	int i, j;
 
-	while (a <= 9)
+	for (i = 0; i <= 99; i++)
 	{
-		b = 0;
-
-		while (b <= 9)
+		for (j = i + 1; j <= 99; j++)
 		{
-			c = a;
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
+			putchar(' ');
+			putchar((j / 10) + '0');
+			putchar((j % 10) + '0');
 
-			while (c <= 9)
+			if (i != 98 || j != 99)
 			{
-				d = b + 1;
-
-				while (d <= 9)
-				{
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(' ');
-					putchar(c + '0');
-					putchar(d + '0');
-					if (a != 9 || b != 8 || c != 9 || d != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					d++;
-				}
-				c++;
+				putchar(',');
+				putchar(' ');
 			}
-			b++;
 		}
-		a++;
 	}
 	putchar('\n');
+
 	return (0);
 }
