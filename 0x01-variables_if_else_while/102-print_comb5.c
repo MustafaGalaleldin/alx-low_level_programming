@@ -17,7 +17,7 @@ int main(void)
 
 		while (b <= 9)
 		{
-			c = 0;
+			c = a;
 
 			while (c <= 9)
 			{
