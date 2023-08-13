@@ -21,7 +21,7 @@ int main(void)
 
 			while (c <= 9)
 			{
-				d = a + 1;
+				d = b + 1;
 
 				while (d <= 9)
 				{
