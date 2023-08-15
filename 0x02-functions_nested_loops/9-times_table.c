@@ -14,8 +14,11 @@ void times_table(void);
 		while (count <= 9)
 		{
 			_putchar(n);
+			if (count != 9)
+			{
 			_putchar(',');
 			_putchar(' ');
+			}
 			count++;
 			n += line;
 		}
