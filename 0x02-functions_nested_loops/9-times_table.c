@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print nine times table
+ * times_table - print nine times table
  */
 void times_table(void)
 {
@@ -13,7 +13,7 @@ void times_table(void)
 
 		while (count <= 9)
 		{
-			_putchar(n);
+			_putchar(n + '0');
 			if (count != 9)
 			{
 			_putchar(',');
