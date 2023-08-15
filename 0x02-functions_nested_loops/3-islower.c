@@ -1,13 +1,11 @@
 #include "main.h"
 /**
  * _islower - if lower
- * c : the input
+ *@x: the input
  * Return: 0 if lower
  */
-int _islower(int c)
+int _islower(int x)
 {
-	int x;
-
 	if (x >= 97 && x <= 122)
 	{
 	return (1);
