@@ -5,33 +5,36 @@
  */
 void print_times_table(int n)
 {
-	if (n >= 0 || n <= 15)
-	{
-	int line = 1;
+	if (n >= 0 && n <= 15)
+	{int line = 0;
 
 	while (line <= n)
-	{
-		int count = 1;
-		int num = line;
+	{int count = 1;
+	int num = line;
 
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
 		while (count <= n)
 		{
-			if (num <= n)
-			{
+			if (num <= 9)
+			{_putchar(' ');
 			_putchar(' ');
 			_putchar(num + '0');
 			}
-			else
+			else if (num < 100)
+			{_putchar(' ');
+			_putchar((num / 10) + '0');
+			_putchar((num % 10) + '0');
+			}
+			else if (num < 1000)
 			{
-				_putchar((num / 10) + '0');
-				_putchar((num % 10) + '0');
+				_putchar((num / 100) + '0');
+				_putchar(((num % 100) / 10) + '0');
+				_putchar(((num % 100) % 10) + '0');
 			}
 			if (count != n)
-			{
-			_putchar(',');
+			{_putchar(',');
 			_putchar(' ');
 			}
 			count++;
