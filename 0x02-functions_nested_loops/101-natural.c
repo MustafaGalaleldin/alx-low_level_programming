@@ -2,9 +2,9 @@
 /**
  * main - Entry point
  *
- * Return: sum
+ * Return: 0
  */
-void main(void)
+int main(void)
 {
 	int sum = 0;
 	int n = 1;
@@ -25,4 +25,5 @@ void main(void)
 		m++;
 	}
 	printf("%d\n", sum);
+	return (0);
 }
