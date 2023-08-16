@@ -4,14 +4,16 @@
  */
 void times_table(void)
 {
-	int line = 0;
+	int line = 1;
 
-	while (line <= 9)
+	while (line <= 10)
 	{
-		int count = 0;
-		int n = 0;
+		int count = 1;
+		int n = line;
 
 		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
 		while (count <= 9)
 		{
 			if (n <= 9)
