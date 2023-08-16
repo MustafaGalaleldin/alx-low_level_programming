@@ -15,12 +15,12 @@ void print_to_98(int n)
 		{
 		putchar(',');
 		putchar(' ');
-		n++;
 		}
 		else
 		{
 			putchar('\n');
 		}
+		n++;
 	}
 	}
 	else
@@ -31,13 +31,13 @@ void print_to_98(int n)
 			if (n != 98)
 			{
 				putchar(',');
-				putchar(' ');
-				n--;
+				putchar(' ');				
 			}
 			else
 			{
 				putchar('\n');
 			}
+			n--;
 		}
 	}
 }
