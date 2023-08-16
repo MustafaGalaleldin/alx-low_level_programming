@@ -11,12 +11,10 @@ void times_table(void)
 		int count = 0;
 		int n = 0;
 
-		_putchar('0');
 		while (count <= 9)
 		{
 			if (n <= 9)
 			{
-			_putchar(' ');
 			_putchar(n + '0');
 			}
 			else
@@ -31,6 +29,10 @@ void times_table(void)
 			}
 			count++;
 			n += line;
+			if (n <= 9)
+			{
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 		line++;
