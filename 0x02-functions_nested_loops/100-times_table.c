@@ -1,40 +1,44 @@
 #include "main.h"
 /**
- * times_table - print nine times table
+ * print_times_table - print times table
+ * @n: input
  */
-void times_table(void)
+void print_times_table(int n)
 {
-	int line = 0;
-
-	while (line <= 9)
+	if (n >= 0 || n <= 15)
 	{
-		int count = 0;
-		int n = 0;
+	int line = 1;
 
-		while (count <= 9)
+	while (line <= n)
+	{
+		int count = 1;
+		int num = line;
+
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		while (count <= n)
 		{
-			if (n <= 9)
+			if (num <= n)
 			{
-			_putchar(n + '0');
+			_putchar(' ');
+			_putchar(num + '0');
 			}
 			else
 			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
+				_putchar((num / 10) + '0');
+				_putchar((num % 10) + '0');
 			}
-			if (count != 9)
+			if (count != n)
 			{
 			_putchar(',');
 			_putchar(' ');
 			}
 			count++;
-			n += line;
-			if (n <= 9)
-			{
-				_putchar(' ');
-			}
+			num = count * line;
 		}
 		_putchar('\n');
 		line++;
+	}
 	}
 }
