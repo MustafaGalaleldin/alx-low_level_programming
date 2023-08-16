@@ -4,9 +4,9 @@
  */
 void times_table(void)
 {
-	int line = 1;
+	int line = 0;
 
-	while (line <= 10)
+	while (line <= 9)
 	{
 		int count = 1;
 		int n = line;
