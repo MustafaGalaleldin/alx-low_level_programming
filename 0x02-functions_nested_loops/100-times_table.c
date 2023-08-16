@@ -13,8 +13,7 @@ void print_times_table(int n)
 	int num = line;
 
 		if (n == 0)
-		{_putchar('0');
-	       _putchar('\n');	}
+		{_putchar('0'); }
 		else
 		{_putchar('0');
 		_putchar(',');
