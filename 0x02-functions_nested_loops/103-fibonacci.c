@@ -9,8 +9,7 @@ int main(void)
 	long int sum1 = 1;
 	long int sum2 = 1;
 	long int sum = 0;
-	long int result;
-	long int result0;
+	long int result = 0;
 
 	while (sum < 4000000)
 	{
@@ -20,8 +19,7 @@ int main(void)
 		sum2 = sum;
 		if (sum % 2 == 0)
 		{
-			result0 = sum;
-			result += result0;
+			result += sum;
 		}
 	}
 	printf("%ld\n", result);
