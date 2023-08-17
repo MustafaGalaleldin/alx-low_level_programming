@@ -15,7 +15,7 @@ int main(void)
 	{
 		int sum = sum1 + sum2;
 
-		printf("%d, ", sum);
+		printf("%u, ", sum);
 		sum1 = sum2;
 		sum2 = sum;
 		count++;

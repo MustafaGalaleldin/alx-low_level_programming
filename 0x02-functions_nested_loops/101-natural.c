@@ -7,8 +7,8 @@
 int main(void)
 {
 	int sum = 0;
-	int n = 1;
-	int m = 1;
+	int n = 0;
+	int m = 0;
 	int mul3 = 0;
 	int mul5 = 0;
 
