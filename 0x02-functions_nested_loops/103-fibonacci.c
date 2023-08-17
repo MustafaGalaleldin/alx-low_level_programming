@@ -8,7 +8,7 @@ int main(void)
 {
 	long int sum1 = 1;
 	long int sum2 = 1;
-	long int sum;
+	long int sum = 0;
 	long int result;
 	long int result0;
 
