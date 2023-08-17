@@ -11,7 +11,7 @@ int main(void)
 
 	while (num < 1024)
 	{
-		if ((num %3 == 0) || (num % 5 ==0))
+		if ((num % 3 == 0) || (num % 5 == 0))
 		{
 			sum += num;
 		}
