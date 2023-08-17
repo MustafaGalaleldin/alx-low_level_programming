@@ -16,7 +16,7 @@ int main(void)
 		long int sum = sum1 + sum2;
 
 		printf("%ld", sum);
-		if (count != 47)
+		if (count != 98)
 		{
 			printf(", ");
 		}
