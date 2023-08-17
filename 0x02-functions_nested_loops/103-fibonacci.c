@@ -14,7 +14,7 @@ int main(void)
 
 	while (sum < 4000000)
 	{
-		int sum = sum1 + sum2;
+		sum = sum1 + sum2;
 
 		sum1 = sum2;
 		sum2 = sum;
