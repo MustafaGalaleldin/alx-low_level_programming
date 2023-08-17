@@ -7,16 +7,22 @@ int main(void)
 {
 	long int a = 612852475143;
 	int b = 2;
+	int d = a / b;
+
+	while (d != 1)
+	{
 	int c = a % b;
-	int d;
 
 	while (c == 0)
 	{
-		d = a / b;
 		a = d;
 		c = a % b;
 	}
-	printf("%d\n", d);
+	b++;
+	d = a / b;
+	}
+	printf("%ld\n", a);
+	return (0);
 }
 
 
