@@ -6,16 +6,20 @@
  */
 int main(void)
 {
-	int sum1 = 1;
-	int sum2 = 2;
-	int count = 0;
+	long int sum1 = 1;
+	long int sum2 = 2;
+	long int count = 1;
 
 	printf("1, 2, ");
-	while (count < 49)
+	while (count <= 98)
 	{
-		int sum = sum1 + sum2;
+		long int sum = sum1 + sum2;
 
-		printf("%d, ", sum);
+		printf("%ld", sum);
+		if (count != 47)
+		{
+			printf(", ");
+		}
 		sum1 = sum2;
 		sum2 = sum;
 		count++;
