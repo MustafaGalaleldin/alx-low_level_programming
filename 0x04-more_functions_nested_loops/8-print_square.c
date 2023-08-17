@@ -13,7 +13,7 @@ void print_square(int size)
 	{
 		int count = 1;
 
-		while (count <= line)
+		while (count <= size)
 		{
 			_putchar('#');
 			count++;
