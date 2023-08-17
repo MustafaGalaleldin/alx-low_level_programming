@@ -11,11 +11,15 @@ int main(void)
 	long int count = 0;
 
 	printf("1, 2, ");
-	while (count < 49)
+	while (count <= 47)
 	{
 		long int sum = sum1 + sum2;
 
-		printf("%ld, ", sum);
+		printf("%ld", sum);
+		if (count != 47)
+		{
+			printf(", ");
+		}
 		sum1 = sum2;
 		sum2 = sum;
 		count++;
