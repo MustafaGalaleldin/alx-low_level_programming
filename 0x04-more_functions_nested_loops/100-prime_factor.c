@@ -6,20 +6,17 @@
 int main(void)
 {
 	long int a = 612852475143;
-	int b = 2;
-	int d = a / b;
+	long int b = 2;
+	long int d;
 
-	while (d != 1)
+	while (a / b != 1)
 	{
-	int c = a % b;
-
-	while (c == 0)
-	{
-		a = d;
-		c = a % b;
-	}
+		while (a % b  == 0)
+		{
+			d = a / b;
+			a = d;
+		}
 	b++;
-	d = a / b;
 	}
 	printf("%ld\n", a);
 	return (0);
