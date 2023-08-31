@@ -26,9 +26,9 @@ int strlength(char *s)
 
 int palih(char *s, int t)
 {
-	if (t < (strlength / 2))
+	if (t < (strlength(s) / 2))
 	{
-		if (s[t] == s[strlength - t - 1])
+		if (s[t] == s[strlength(s) - t - 1])
 		{
 			palih(s, t + 1);
 		}
@@ -37,10 +37,7 @@ int palih(char *s, int t)
 			return (0);
 		}
 	}
-	else
-	{
 		return (1);
-	}
 }
 
 /**
