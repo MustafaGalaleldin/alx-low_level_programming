@@ -1,68 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 /**
- * ch_num - check
- * @str: str
- *
- * Return: 0
- */
-int ch_num(char *str)
-{
-	unsigned int c;
-
-	c = 0;
-	while (c < strlen(str))
-
-	{
-		if (!isdigit(str[count]))
-		{
-			return (0);
-		}
-
-		c++;
-	}
-	return (1);
-}
-
-/**
- * main - Print the name of the program
+ * main - entry
  * @argc: c
  * @argv: v
- *
  * Return: 0
  */
 
 int main(int argc, char *argv[])
-
 {
+	int i, sum = 0;
 
-	int c;
-	int z;
-	int sum = 0;
-
-	c = 1;
-	while (c < argc)
+	for (i = 1; i < argc; i++)
 	{
-		if (ch_num(argv[count]))
+		int x;
 
-		{
-			z = atoi(argv[count]);
-			sum += z;
-		}
+		x = atoi(argv[i]);
 
-		else
+		if (argv[i] != 0 && x == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-
-		c++;
+		sum += atoi(argv[i]);
 	}
-
 	printf("%d\n", sum);
-
 	return (0);
 }
-
