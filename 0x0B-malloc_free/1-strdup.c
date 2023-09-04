@@ -32,5 +32,6 @@ char *_strdup(char *str)
 	{
 		return (0);
 	}
+	p = str;
 	return (p);
 }
