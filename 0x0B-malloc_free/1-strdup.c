@@ -26,12 +26,16 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *p = malloc(sizeof(char) * _strlen(str));
+	char *p = malloc(sizeof(char) * _strlen(str) + 1);
+	int i;
 
 	if (p == 0 || str == 0)
 	{
 		return (0);
 	}
-	p = str;
+	for (i = 0; i < _strlen(str) + 1; i++)
+	{
+		p[i] = str[i];
+	}
 	return (p);
 }
