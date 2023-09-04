@@ -31,7 +31,7 @@ char *_strdup(char *str)
 
 	if (p == 0 || str == 0)
 	{
-		return (0);
+		return ('\0');
 	}
 	for (i = 0; i < _strlen(str) + 1; i++)
 	{
