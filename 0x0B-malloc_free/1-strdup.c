@@ -26,10 +26,15 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *p = malloc(sizeof(char) * _strlen(str) + 1);
 	int i;
+	char *p;
 
-	if (p == 0 || str == 0)
+	if (str == 0)
+		return (0);
+
+	p = malloc(sizeof(char) * _strlen(str) + 1);
+
+	if (p == 0)
 	{
 		return ('\0');
 	}
