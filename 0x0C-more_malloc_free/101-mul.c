@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.>
+#include <string.h>
+#include <stdio.h>
+
 /**
  * _isdigit - upper
  * @c: input
@@ -71,7 +73,7 @@ char *multi(char *s1, char *s2)
 			}
 			b = s2[l2] - '0';
 
-			c += r[l1 + l2 + 1] + (a * b);
+			c += p[l1 + l2 + 1] + (a * b);
 			p[l1 + l2 + 1] = c % 10;
 
 			c /= 10;
@@ -107,7 +109,7 @@ int main(int argc, char **argv)
 		if (pr[c])
 			a = 1;
 		if (a)
-			_putchar(r[c] + '0');
+			_putchar(pr[c] + '0');
 		c++;
 	}
 	if (!a)
