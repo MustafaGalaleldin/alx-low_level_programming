@@ -31,6 +31,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *ptr;
 	unsigned int x, y, c;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	if (n >= (unsigned int)_strlen(s2))
 	{
 		c = _strlen(s1) + _strlen(s2) + 1;
