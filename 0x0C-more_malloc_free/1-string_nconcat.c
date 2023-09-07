@@ -51,13 +51,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		else
 		{
-			for (y = 0; y < n || s2[y] != '\0'; y++)
+			for (y = 0; y < n && s2[y] != '\0'; y++)
 			{
 				ptr[x] = s2[y];
 				x++;
 			}
 		}
 	}
-	ptr[x] = '\0';
+	ptr[x - 1] = '\0';
 	return (ptr);
 }
