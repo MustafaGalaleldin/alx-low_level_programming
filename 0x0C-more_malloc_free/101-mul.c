@@ -35,11 +35,11 @@ int _strlen(char *s)
 }
 
 /**
- * big_multiply - multiply two big number strings
- * @s1: the first big number string
- * @s2: the second big number string
+ * multi - multiply two big no.s
+ * @s1: the first
+ * @s2: the second
  *
- * Return: the product big number string
+ * Return: prod
  */
 char *multi(char *s1, char *s2)
 {
@@ -86,31 +86,31 @@ char *multi(char *s1, char *s2)
 
 
 /**
- * main - multiply two big number strings
- * @argc: the number of arguments
- * @argv: the argument vector
+ * main - multiplication
+ * @argc: argc
+ * @argv: argv
  *
- * Return: Always 0 on success.
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
 	char *pr;
-	int a, c, x;
+	int a, b, x;
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
 
 	x = _strlen(argv[1]) + _strlen(argv[2]);
 	pr = multi(argv[1], argv[2]);
-	c = 0;
+	b = 0;
 	a = 0;
-	while (c < x)
+	while (b < x)
 	{
-		if (pr[c])
+		if (pr[b])
 			a = 1;
 		if (a)
-			_putchar(pr[c] + '0');
-		c++;
+			_putchar(pr[b] + '0');
+		b++;
 	}
 	if (!a)
 		_putchar('0');
