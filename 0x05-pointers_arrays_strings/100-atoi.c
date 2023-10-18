@@ -17,6 +17,8 @@ int _atoi(char *s)
 	{
 		if (*s == '-')
 			ch++;
+		if (*s >= 48 && *s <= 57)
+			break;
 		s++;
 	}
 		if (*s == '-')
