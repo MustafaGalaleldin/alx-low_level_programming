@@ -9,29 +9,36 @@
 int _atoi(char *s)
 {
 	int ch = 0;
-	char *str = s;
-	int res = 0;
+	int result = 0;
 	int cond;
 
-	while (s && !(*(s + 1) >= 48 && *(s + 1) <= 57))
+	/* to calculate the initial negative signs */
+	while (*s != 0 && !(*(s + 1) >= 48 && *(s + 1) <= 57))
 	{
 		if (*s == '-')
 			ch++;
 		s++;
 	}
-		if (*(s + 1) == '-')
+		if (*s == '-')
 			ch++;
+
+		/* to set the sign */
 		if (ch % 2 == 0)
 			cond = 0;
 		else
 			cond = 1;
 
-		while (str && (*str >= 48 && *str  <= 57))
+		while (*s != 0)
 		{
-			res = res * 10 + (*str - '0');
-			str++;
+			if (*s >= 48 && *s <= 57)
+				result = result * 10 + (*s - '0');
+			s++;
+
+			/* to stop at the first integer sequence*/
+			if (!(*s >= 48 && *s <= 57))
+				break;
 		}
 		if (cond)
-			res = -res;
-		return (res);
+			result = -result;
+		return (result);
 }
