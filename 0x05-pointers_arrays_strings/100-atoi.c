@@ -33,7 +33,7 @@ int _atoi(char *s)
 		while (*s != 0)
 		{
 			if (*s >= 48 && *s <= 57)
-				result = result * 10 + (*s - '0');
+				result = (unsigned int)result * 10 + (*s - '0');
 			s++;
 
 			/* to stop at the first integer sequence*/
@@ -41,6 +41,6 @@ int _atoi(char *s)
 				break;
 		}
 		if (cond)
-			result = -result;
+			result = -(unsigned int)result;
 		return (result);
 }
