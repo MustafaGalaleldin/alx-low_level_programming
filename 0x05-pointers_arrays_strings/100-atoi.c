@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int ch = 0;
-	int result = 0;
+	unsigned int result = 0;
 	int cond;
 
 	/* to calculate the initial negative signs */
@@ -33,7 +33,7 @@ int _atoi(char *s)
 		while (*s != 0)
 		{
 			if (*s >= 48 && *s <= 57)
-				result = (unsigned int)result * 10 + (*s - '0');
+				result = /*(unsigned int)*/result * 10 + (*s - '0');
 			s++;
 
 			/* to stop at the first integer sequence*/
@@ -41,6 +41,6 @@ int _atoi(char *s)
 				break;
 		}
 		if (cond)
-			result = -(unsigned int)result;
-		return (result);
+			result = -/*(unsigned int)*/result;
+		return ((int)result);
 }
