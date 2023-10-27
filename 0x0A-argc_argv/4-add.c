@@ -1,6 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
+/**
+ * pure - to detect pure numbers strings
+ *
+ * @c: string
+ *
+ * Return: 1 if pure numbers 0 if mixed
+ */
+
+int pure(char *c)
+{
+	int i;
+
+	for (i = 0; *c != '\0'; i++, c++)
+	{
+		if (*c >= 48 && *c <= 57)
+			continue;
+		else
+			return (0);
+	}
+	return (1);
+}
 
 /**
  * main - entry point
@@ -24,7 +45,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]))
+		if (pure(argv[i]))
 			sum += atoi(argv[i]);
 		else
 		{
