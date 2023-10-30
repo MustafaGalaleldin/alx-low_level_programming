@@ -2,25 +2,26 @@
 #include <stdlib.h>
 
 /**
- * _strcat -  concatenates two strings.
+ * _strcat - concatenates two strings and put them into space pointed
  * @dest: string
  * @src: tring
+ * @p: pointer to space of two strings
  * Return: resulting string dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src, char *p)
 {
 	int i, j;
 		for (i = 0; dest[i] != '\0'; i++)
 		{
-			;
+			p[i] = dest[i];
 		}
 		for (j = 0; src[j] != '\0'; j++, i++)
 		{
-		dest[i] = src[j];
+		p[i] = src[j];
 		}
-		dest[i] = '\0';
-		return (dest);
+		p[i] = '\0';
+		return (p);
 }
 
 #include "main.h"
@@ -58,7 +59,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (p)
 	{
-		p = _strcat(s1, s2);
+		p = _strcat(s1, s2, p);
 		return (p);
 	}
 	return (NULL);
