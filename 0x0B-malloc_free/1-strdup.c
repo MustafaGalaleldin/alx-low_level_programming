@@ -50,6 +50,8 @@ char *_strdup(char *str)
 	int i = _strlen(str) + 1;
 	char *c = malloc(i);
 
+	if (str == NULL)
+		return (NULL);
 	if (c)
 	{
 		_memcpy(c, str, i);
