@@ -49,13 +49,13 @@ int wc(char *str)
 
 char **strtow(char *str)
 {
-	int x, y, z, a, b = 0; c = 0;
+	int x, y, z, a, b = 0, c = 0;
 	char **p;
 
 	b = wc(str);
 	if (c == 1)
 		return (NULL);
-	p = malloc(sizeof(*ptr) * b);
+	p = malloc(sizeof(*p) * b);
 	if (!str || str == "" || !p)
 		return (NULL);
 	p[b - 1] = NULL;
@@ -71,7 +71,7 @@ char **strtow(char *str)
 		y--;
 		if (p[c] == NULL)
 		{
-/**			for (z = 0; z < c; z++)
+			/*for (z = 0; z < c; z++)
 				free(p[z]);
 			free(p[b - 1]);
 			free(p);*/
