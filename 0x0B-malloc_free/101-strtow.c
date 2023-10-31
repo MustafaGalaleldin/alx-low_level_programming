@@ -2,6 +2,25 @@
 #include "main.h"
 
 /**
+ * _wrdlen - l
+ * @s: input
+ * Return: length
+ */
+int _wrdlen(char *s)
+{
+	int count = 0;
+
+	while (*s == ' ')
+		s++;
+	while (*s != ' ')
+	{
+		count++;
+		s++;
+	}
+	return (count);
+}
+
+/**
  * wc - words counter
  *
  * @str: string
@@ -14,11 +33,8 @@ int wc(char *str)
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		if (str[x + 1] == '\0' && str[x] != '\t')
-			c++;
-		else if (str[x] != '\t' || (str[x] == '\t' && str[x + 1] == '\t'))
-			continue;
-		else if (str[x - 1] != '\t')
+		if ((str[x] != ' ' && str[x + 1] == ' ') ||
+				(str[x + 1] == '\0' && str[x] != ' '))
 			c++;
 	}
 	return (c);
@@ -33,11 +49,42 @@ int wc(char *str)
 
 char **strtow(char *str)
 {
-	int x, y, c;
-	c = wc(str);
-	char **p = malloc(sizeof(*p) * c);
+	int x, y, z, a, b = 0; c = 0;
+	char **p;
 
+	b = wc(str);
+	if (c == 1)
+		return (NULL);
+	p = malloc(sizeof(*ptr) * b);
 	if (!str || str == "" || !p)
 		return (NULL);
-	for (x = 0;)
-
+	p[b - 1] = NULL;
+	x = 0;
+	while (str[x])
+	{
+		if (str[x] != ' ' && (str[x - 1] == ' ') || x == 0)
+		{
+			for (y = 1; str[x + y] != ' ' && str[x + y]; y++)
+				;
+		y++;
+		p[c] = malloc(sizeof(**p) * y);
+		y--;
+		if (p[c] == NULL)
+		{
+/**			for (z = 0; z < c; z++)
+				free(p[z]);
+			free(p[b - 1]);
+			free(p);*/
+			return (NULL);
+		}
+		for (a = 0; a < y; a++)
+			p[c][a] = str[x + a];
+		p[c][a] = '\0';
+		c++;
+		x += y;
+		}
+	else
+		x++;
+	}
+	return (p);
+}
