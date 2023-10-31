@@ -53,9 +53,9 @@ char **strtow(char *str)
 	char **p;
 
 	b = wc(str);
-	if (c == 1)
+	if (b == 1)
 		return (NULL);
-	p = malloc(sizeof(*p) * b);
+	p = (char **)malloc(sizeof(char *) * b);
 	if (!str || *str == '\0' || !p)
 		return (NULL);
 	p[b - 1] = NULL;
@@ -67,7 +67,7 @@ char **strtow(char *str)
 			for (y = 1; str[x + y] != ' ' && str[x + y]; y++)
 				;
 		y++;
-		p[c] = malloc(sizeof(**p) * y);
+		p[c] = (char *)malloc(sizeof(char) * y);
 		y--;
 		if (p[c] == NULL)
 		{
