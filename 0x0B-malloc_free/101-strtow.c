@@ -71,10 +71,10 @@ char **strtow(char *str)
 		y--;
 		if (p[c] == NULL)
 		{
-			/*for (z = 0; z < c; z++)
+			for (z = 0; z < c; z++)
 				free(p[z]);
 			free(p[b - 1]);
-			free(p);*/
+			free(p);
 			return (NULL);
 		}
 		for (a = 0; a < y; a++)
