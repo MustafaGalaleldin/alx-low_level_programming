@@ -62,7 +62,7 @@ char **strtow(char *str)
 	x = 0;
 	while (str[x])
 	{
-		if (str[x] != ' ' && (str[x - 1] == ' ') || x == 0)
+		if (str[x] != ' ' && (str[x - 1] == ' ' || x == 0))
 		{
 			for (y = 1; str[x + y] != ' ' && str[x + y]; y++)
 				;
