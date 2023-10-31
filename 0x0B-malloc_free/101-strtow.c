@@ -56,7 +56,7 @@ char **strtow(char *str)
 	if (c == 1)
 		return (NULL);
 	p = malloc(sizeof(*p) * b);
-	if (!str || str == "" || !p)
+	if (!str || *str == '\0' || !p)
 		return (NULL);
 	p[b - 1] = NULL;
 	x = 0;
