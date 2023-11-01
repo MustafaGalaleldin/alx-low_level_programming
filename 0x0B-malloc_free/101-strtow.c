@@ -14,9 +14,6 @@ int wc(char *str)
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		/*if ((str[x] != ' ' && str[x + 1] == ' ') |*/
-				/*(str[x + 1] == '\0' && str[x] != ' '))*/
-			/*c++;*/
 		if (str[x] == ' ')
 		{
 			if (str[x + 1] != ' ' && str[x + 1] != '\0')
@@ -38,7 +35,7 @@ int wc(char *str)
 
 char **strtow(char *str)
 {
-	int x, y,/* z,*/ a, b = 0, c = 0;
+	int x, y, a, b = 0, c = 0;
 	char **p;
 
 	if (str == NULL || *str == '\0')
@@ -62,10 +59,6 @@ char **strtow(char *str)
 		y--;
 		if (p[c] == NULL)
 		{
-			/*for (z = 0; z < c; z++)*/
-				/*free(p[z]);*/
-			/*free(p[b - 1]);*/
-			/*free(p);*/
 			return (NULL);
 		}
 		for (a = 0; a < y; a++)
