@@ -14,20 +14,20 @@ void _puts(char *str)
 	_putchar('\n');
 }
 /**
- * pure - to detect pure numbers strings
+ * pure_int - to detect pure numbers strings
  *
  * @c: string
  *
  * Return: 1 if pure numbers 0 if mixed
  */
 
-int pure(char *c)
+int pure_int(char *c)
 {
 	int i;
 
 	for (i = 0; *c != '\0'; i++, c++)
 	{
-		if (*c >= 48 && *c <= 57)
+		if ((*c >= 48 && *c <= 57) || *c == '-')
 			continue;
 		else
 			return (0);
@@ -44,7 +44,7 @@ int pure(char *c)
 int _atoi(char *s)
 {
 	int ch = 0;
-	unsigned int result = 0;
+	int result = 0;
 	int cond;
 
 	/* to calculate the initial negative signs */
@@ -85,8 +85,13 @@ int _atoi(char *s)
  * Return: number
  */
 
-void print_number(unsigned long int n)
+void print_number(long int n)
 {
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+	}
 	if (n / 10 != 0)
 	{
 	print_number(n / 10);
@@ -108,7 +113,7 @@ int main(int ac, char *av[])
 		_puts("Error");
 		exit(98);
 	}
-	if (!(pure(av[1]) && pure(av[2])))
+	if (!(pure_int(av[1]) && pure_int(av[2])))
 	{
 		_puts("Error");
 		exit(98);
