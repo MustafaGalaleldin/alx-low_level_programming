@@ -26,11 +26,8 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(2);
 	}
-	while (c)
-	{
+	while (c--)
 		printf("%02hhx%s", *v++, c ? " " : "\n");
-		c--;
-	}
 	return (0);
 }
 
