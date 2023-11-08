@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "function_pointers.h"
+#include "calc.h"
 
 /**
  * main - entry point
@@ -35,7 +36,3 @@ int main(int ac, char **av)
 	printf("%d\n", get_op_func(av[2])(a, b));
 	return (0);
 }
-
-
-
-
