@@ -4,26 +4,6 @@
 #include <string.h>
 
 /**
- * _strlen - l
- * @s: input
- * Return: length
- *
-int _strlen(const char * const s)
-{
-	int count = 0;
-	int i;
-
-	if (!s)
-		return (0);
-	while (s[i] != '\0')
-	{
-		count++;
-		i++;
-	}
-	return (count);
-}*/
-
-/**
  * print_all - prints anything
  *
  * @format: to be printed
