@@ -1,12 +1,13 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * _strlen - l
  * @s: input
  * Return: length
- */
+ *
 int _strlen(const char * const s)
 {
 	int count = 0;
@@ -20,7 +21,7 @@ int _strlen(const char * const s)
 		i++;
 	}
 	return (count);
-}
+}*/
 
 /**
  * print_all - prints anything
@@ -37,8 +38,9 @@ void print_all(const char * const format, ...)
 	if (!format)
 	{
 		printf("\n");
+		return;
 	}
-	len = _strlen(format);
+	len = strlen(format);
 	va_start(ar, format);
 	while (i < len)
 	{
@@ -61,8 +63,11 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		if (i + 1 != len)
+		{
 			printf(", ");
-		else
+			i++;
+			continue;
+		}
 			printf("\n");
 		i++;
 	}
