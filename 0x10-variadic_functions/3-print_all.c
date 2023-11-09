@@ -48,6 +48,15 @@ void print_all(const char * const format, ...)
 				case 'i':
 					printf("%d", va_arg(ar, int));
 					break;
+				case 'f':
+					printf("%f", va_arg(ar, double));
+					break;
+				case 's':
+					printf("%s", va_arg(ar, char *));
+					break;
+				default:
+					i++;
+					continue;
 			}
 			if (i + 1 != len)
 				printf(", ");
@@ -60,5 +69,3 @@ void print_all(const char * const format, ...)
 		else
 			printf("\n");
 }
-					
-
