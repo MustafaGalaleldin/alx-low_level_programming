@@ -14,8 +14,9 @@ void print_all(const char * const format, ...)
 {
 	va_list ar;
 	int len, i = 0;
+	char *x;
 
-	if (!format)
+	if (!format || format[0] == '\0')
 	{
 		printf("\n");
 		return;
@@ -36,7 +37,8 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(ar, double));
 				break;
 			case 's':
-				printf("%s", va_arg(ar, char *));
+				x = va_arg(ar, char *);
+				printf("%s", x ? x : "(nil)");
 				break;
 			default:
 				i++;
