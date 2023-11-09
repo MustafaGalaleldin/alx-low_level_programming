@@ -19,8 +19,7 @@ void print_all(const char * const format, ...)
 	if (!format || format[0] == '\0')
 	{
 		printf("\n");
-		return;
-	}
+		return; }
 	len = strlen(format);
 	va_start(ar, format);
 	while (i < len)
@@ -48,8 +47,7 @@ void print_all(const char * const format, ...)
 		{
 			printf(", ");
 			i++;
-			continue;
-		}
+			continue; }
 			printf("\n");
 		i++;
 	}
