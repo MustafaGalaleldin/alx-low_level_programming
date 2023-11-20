@@ -31,26 +31,23 @@ unsigned int listintlen(const listint_t *h)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *ptr, *p;
-	unsigned int m, i;
+	unsigned int m, i = 0;
 
+	
 	p = *head;
 	ptr = malloc(sizeof(listint_t));
-	if (!ptr)
+	if (!ptr || !p)
 		return (NULL);
 
 	m = listintlen(p);
 	m--;
+	if (!(idx <= m))
+		return (NULL);
 
-	for (i = 0; i <= m; i++)
-	{
-		if (i == idx)
-		{
-			ptr->n = n;
-			ptr->next = p;
-			p = ptr;
-			return (ptr);
-		}
+	while (i != idx - 1)
 		p = p->next;
-	}
-	return (NULL);
+	ptr->n = n;
+	ptr->next = p->next;
+	p->next = ptr;
+	return (ptr);
 }
