@@ -44,7 +44,7 @@ size_t ncalc(const listint_t *head)
  *
  * @head: ptr
  *
- * Returns: the number of nodes in the list
+ * Return: the number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
