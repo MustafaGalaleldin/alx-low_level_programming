@@ -43,14 +43,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	m = listintlen(p);
 	m--;
 	if (!(idx <= m) && idx != m + 1)
+	{
+		free(ptr);
 		return (NULL);
+	}
 
 	if (!idx)
 	{
 		ptr->n = n;
 		ptr->next = p;
 		*head = ptr;
-		return (*head);
+		return (ptr);
 	}
 	while (i != idx - 1)
 	{
