@@ -5,7 +5,7 @@
  *
  * @h: ptr to ptr
  *
- * Returns: the size of the list that was free’d
+ * Return: the size of the list that was free’d
  */
 size_t free_listint_safe(listint_t **h)
 {
