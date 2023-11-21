@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_len - claculate all the elements of a listint_t list.
+ * listintlen - claculate all the elements of a listint_t list.
  *
  * @h: list pointer
  *
@@ -33,7 +33,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *ptr, *p;
 	unsigned int m, i = 0;
 
-	
+
 	p = *head;
 	ptr = malloc(sizeof(listint_t));
 	if (!ptr || !p)
@@ -44,8 +44,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!(idx <= m))
 		return (NULL);
 
+	if (!idx)
+	{
+		ptr->n = n;
+		ptr->next = p;
+		*head = ptr;
+		return (*head);
+	}
 	while (i != idx - 1)
+	{
 		p = p->next;
+		i++;
+	}
 	ptr->n = n;
 	ptr->next = p->next;
 	p->next = ptr;

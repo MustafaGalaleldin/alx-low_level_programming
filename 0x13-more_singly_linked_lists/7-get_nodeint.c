@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_len - claculate all the elements of a listint_t list.
+ * listintlen - claculate all the elements of a listint_t list.
  *
  * @h: list pointer
  *
