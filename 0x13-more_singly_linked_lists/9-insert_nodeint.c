@@ -33,15 +33,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *ptr, *p;
 	unsigned int m, i = 0;
 
-
+	if (!(head && *head))
+		return (NULL);
 	p = *head;
 	ptr = malloc(sizeof(listint_t));
-	if (!ptr || !p)
+	if (!ptr)
 		return (NULL);
 
 	m = listintlen(p);
 	m--;
-	if (!(idx <= m))
+	if (!(idx <= m) && idx != m + 1)
 		return (NULL);
 
 	if (!idx)
