@@ -6,6 +6,7 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 #define READ_BUF_SIZE 1024
 int _putcahr(char c);
