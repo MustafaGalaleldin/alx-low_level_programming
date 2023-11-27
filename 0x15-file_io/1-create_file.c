@@ -31,11 +31,11 @@ int _strlen(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t ret;
+	ssize_t ret = 0;
 
 	if (!filename)
 		return (-1);
-	fd = open(filename, O_RDONLY, O_CREAT, O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_WRONLY, O_CREAT, O_TRUNC, o600);
 	if (fd == -1)
 		return (-1);
 	if (_strlen(text_content))
