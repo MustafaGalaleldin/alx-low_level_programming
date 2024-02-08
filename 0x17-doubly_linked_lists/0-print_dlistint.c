@@ -10,7 +10,7 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t ret = 0;
-	dlistint_t *p = h;
+	const dlistint_t *p = h;
 
 	while (p)
 	{
@@ -18,5 +18,5 @@ size_t print_dlistint(const dlistint_t *h)
 		p = p->next;
 		ret++;
 	}
-	return (ret)
+	return (ret);
 }
