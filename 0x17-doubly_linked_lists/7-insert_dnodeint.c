@@ -1,30 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodeint - add at beg
- * @head: h
- * @n: data
- * Return: the address of the new element, or NULL if it failed
- *
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{
-        dlistint_t *nod = malloc(sizeof(dlistint_t));
-
-        if (!nod)
-                return (NULL);
-
-        nod->n = n;
-        nod->next = NULL;
-        nod->prev = NULL;
-        if (*head)
-        {
-                nod->next = *head;
-                (*head)->prev = nod;
-        }
-        *head = nod;
-        return (nod);
-}*/
-/**
- * insert_dnodeint_at_index - as name
+ * insert_dnodeint_at_index - as mentioned
  * @h: head
  * @idx: index
  * @n: data
@@ -69,10 +45,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			ptr1->prev = node;
 			node->next = ptr1;
 			node->prev = ptr;
-			return (node);
-		}
+			return (node); }
 		ptr = ptr->next;
-		x++;
-	}
-	return (NULL);
-}
+		x++; }
+	return (NULL); }
