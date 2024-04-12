@@ -35,12 +35,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(item);
 		return (1); }
 
-		node = *cur;
-		*cur = item;
-		item->next = node;
-		return (1);
-	}
+	node = *cur;
+	*cur = item;
+	item->next = node;
+	return (1);
 	free(item->key);
 	free(item->value);
 	free(item);
-	return (0); }
+	return (0);
+}
