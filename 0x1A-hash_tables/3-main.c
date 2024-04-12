@@ -15,7 +15,9 @@ int main(void)
 	ht = hash_table_create(1024);
 	hash_table_set(ht, "betty", "cool");
 	hash_table_set(ht, "hetairas", "1");
+	hash_table_set(ht, "betty", "");
 	printf("%s\n", hash_table_get(ht, "hetairas"));
+	printf("%s\n", hash_table_get(ht, "betty"));
 	hash_table_set(ht, "hetairas", "2");
 	printf("%s\n", hash_table_get(ht, "hetairas"));
 	printf("%s\n", hash_table_get(ht, "betty"));
