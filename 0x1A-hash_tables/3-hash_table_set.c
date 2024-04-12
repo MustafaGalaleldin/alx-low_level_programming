@@ -33,7 +33,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (!strcmp((*cur)->key, key))
 		{
-			(*cur)->value = (char *)value;
+			/*(*cur)->value = (char *)value;*/
+			strcpy((*cur)->value, value);
+			free(item->key);
+			free(item->value);
+			free(item);
 			return (1);
 		}
 		else
