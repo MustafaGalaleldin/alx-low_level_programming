@@ -10,17 +10,19 @@
  */
 int main(void)
 {
-    hash_table_t *ht;
+	hash_table_t *ht;
 
-    ht = hash_table_create(1024);
-    hash_table_set(ht, "betty", "cool");
-    hash_table_set(ht, "hetairas", "1");
-    printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
-    hash_table_set(ht, "hetairas", "2");
-    printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
-    printf("%s\n", ht->array[key_index((const unsigned char*)"betty", ht->size)]->value);
-    hash_table_set(ht, "mentioner", "dm");
-    printf("%s\n", ht->array[key_index((const unsigned char*)"mentioner", ht->size)]->value);
-    printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
-    return (EXIT_SUCCESS);
+	ht = hash_table_create(1024);
+	hash_table_set(ht, "betty", "cool");
+	hash_table_set(ht, "hetairas", "1");
+	printf("%s\n", hash_table_get(ht, "hetairas"));
+	hash_table_set(ht, "hetairas", "2");
+	printf("%s\n", hash_table_get(ht, "hetairas"));
+	printf("%s\n", hash_table_get(ht, "betty"));
+	hash_table_set(ht, "mentioner", "dm");
+	printf("%s\n", hash_table_get(ht, "mentioner"));
+	printf("%lu\n", key_index((const unsigned char *)"hetairas", ht->size));
+	printf("%lu\n", key_index((const unsigned char *)"mentioner", ht->size));
+
+	return (EXIT_SUCCESS);
 }
