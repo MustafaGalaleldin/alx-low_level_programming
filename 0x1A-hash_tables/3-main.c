@@ -15,10 +15,12 @@ int main(void)
     ht = hash_table_create(1024);
     hash_table_set(ht, "betty", "cool");
     hash_table_set(ht, "hetairas", "1");
+    printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
     hash_table_set(ht, "hetairas", "2");
     printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
     printf("%s\n", ht->array[key_index((const unsigned char*)"betty", ht->size)]->value);
     hash_table_set(ht, "mentioner", "dm");
     printf("%s\n", ht->array[key_index((const unsigned char*)"mentioner", ht->size)]->value);
+    printf("%s\n", ht->array[key_index((const unsigned char*)"hetairas", ht->size)]->value);
     return (EXIT_SUCCESS);
 }
