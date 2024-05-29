@@ -35,3 +35,5 @@ void print_school(void)
 }
 /**/
 /* School */
+/* School */
+/* School */
