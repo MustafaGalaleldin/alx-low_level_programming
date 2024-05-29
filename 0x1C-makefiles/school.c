@@ -34,3 +34,4 @@ void print_school(void)
 	printf("\"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
 }
 /**/
+/* School */
